@@ -7,13 +7,18 @@ const Graphs: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
+      document.body.classList.add('popup-open'); // Voeg de klasse toe wanneer de popup wordt weergegeven
     }, 2000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove('popup-open'); // Verwijder de klasse wanneer de popup wordt gesloten
+    };
   }, []);
 
   const handleClosePopup = () => {
     setShowPopup(false);
+    document.body.classList.remove('popup-open'); // Verwijder de klasse wanneer de popup wordt gesloten
   };
 
   return (

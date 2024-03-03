@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+.popup-open {
+  overflow: hidden;
+}
+
 .Graphs-header{
     padding: 0rem 2rem; 
     display: flex;
@@ -64,7 +68,7 @@
     background: rgb(22,42,77);
     background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
     font-family: 'Roboto', sans-serif;
-    color: rgb(167, 167, 167);
+    color: rgb(146, 146, 146);
   }
 
   .popup-content{
@@ -80,4 +84,5 @@
     color: #5ea8f8;
     cursor: pointer;
   }
+  
   

@@ -1,6 +1,7 @@
 import TopHeader from "./components/TopHeader/TopHeader";
 import BottomHeader from "./components/BottomHeader/BottomHeader";
 import Graphs from "./components/Graphs/Graphs";
+import Footer from "./components/Footer/footer"
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <TopHeader />
       <BottomHeader />
       <Graphs />
+      <Footer />
     </div>
   );
 }
