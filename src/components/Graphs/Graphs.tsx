@@ -10,7 +10,6 @@ const Graphs: React.FC = () => {
       </div>
       <div className="line"></div>
       <div className="top"></div>
-
     </header>
   );
 };
