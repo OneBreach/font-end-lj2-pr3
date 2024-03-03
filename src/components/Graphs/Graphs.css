@@ -25,4 +25,59 @@
     margin:  2rem 2rem;
     background-color: rgb(255, 0, 0);
   }
+
+  .Graphs-container {
+    position: relative;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background: rgb(22,42,77);
+    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .popup-content .welcome-text{
+    font-family: 'Roboto', sans-serif;
+    width: 500px;
+    background: rgb(22,42,77);
+    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
+  }
+
+  .gast-button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0px 0px 0px;
+    background: rgb(22,42,77);
+    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(167, 167, 167);
+  }
+
+  .popup-content{
+    background: rgb(22,42,77);
+    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
+  }
+
+  .popup-buttons p {
+  margin-left: 20px;
+  }
+  
+  .gast-button:hover{
+    color: #5ea8f8;
+    cursor: pointer;
+  }
   
