@@ -1,25 +1,38 @@
-import React from 'react';
-import './TopHeader.css';
+import React from "react";
+import "./TopHeader.css";
+import { useState, useEffect } from "react";
 
 const TopHeader: React.FC = () => {
+  const [coins, setCoins] = useState([]);
+  useEffect(() => {
+    const fecthCoins = async () => {
+      const res = await fetch(`https://api.coincap.io/v2/assets?limit=10`);
+      const data = await res.json();
+      console.log(data.data);
+      setCoins(data.data);
+    };
+
+    fecthCoins();
+  });
   return (
     <header>
       <div className="top-header">
-        <nav>
-          <div className="data-container">
-            <p>Cryptos: <span>2.2M+</span></p>
-            <p>Exchanges: <span>711</span></p>
-            <p>Market Cap: <span>$2.21T</span></p>
-            <p>24h Vol: <span>$111.24B</span></p>
-            <p>Dominance: <span>BTC: 52.7% ETH: 18.0%</span></p>
-            <p>18.0% ETH Gas: <span>61 Gwei</span></p>
-            <p>Fear & Greed: <span>80/100</span></p>
-            <p>18.0% ETH Gas: <span>61 Gwei</span></p>
-            <p>Fear & Greed: <span>80/100</span></p>
+        {coins.map(({ id, name, changePercent24Hr }) => (
+          <div key={id} className="coin-data">
+            <p className="coin-name">{name}</p>
+            <p
+              className={`change-percent ${
+                changePercent24Hr < 0 ? "negative" : "positive"
+              }`}
+            >
+              <span>{parseFloat(changePercent24Hr).toFixed(3)}%</span>
+            </p>
           </div>
-        </nav>
+        ))}
+        <button className="log-in-button"><p>Log in</p></button>
+        <button className="sign-up-button"><p>Sign up</p></button>
       </div>
-            <div className="line"></div>
+      <div className="line"></div>
     </header>
   );
 };

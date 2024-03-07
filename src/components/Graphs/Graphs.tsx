@@ -1,48 +1,77 @@
-import React, { useState, useEffect } from 'react';
-import './Graphs.css';
+import { useState, useEffect } from "react";
+import "./Graphs.css";
 
 const Graphs: React.FC = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
+  const [coins, setCoins] = useState([]);
+  const [limit, setLimit] = useState(20);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-      document.body.classList.add('popup-open'); // Voeg de klasse toe wanneer de popup wordt weergegeven
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-      document.body.classList.remove('popup-open'); // Verwijder de klasse wanneer de popup wordt gesloten
+    const fecthCoins = async () => {
+      const res = await fetch(
+        `https://api.coincap.io/v2/assets?limit=${limit}`
+      );
+      const data = await res.json();
+      console.log(data.data);
+      setCoins(data.data);
     };
-  }, []);
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-    document.body.classList.remove('popup-open'); // Verwijder de klasse wanneer de popup wordt gesloten
-  };
-
+    fecthCoins();
+  });
   return (
+    
     <div className="Graphs-container">
-      {showPopup && (
-        <div className="popup-overlay">
-          <div className="popup">
-            <div className="popup-content">
-              <p className="welcome-text">Welkom bij Crypto Checker! Om toegang te krijgen tot alle functies en gedetailleerde informatie over cryptocurrencies, kun je doorgaan als gast en direct beginnen met browsen. Klik op 'Doorgaan als gast' om door te gaan naar de website en de huidige crypto-data te bekijken.</p>
-              <p className="gast-button" onClick={handleClosePopup}>Doorgaan als gast</p>
-            </div>
-          </div>
-        </div>
-      )}
       <header className="Graphs-header">
-        <div>
-          <div className="square"></div>
-          <div className="square"></div>
-        </div>
-        <div className="line"></div>
-        <div className="top"></div>
+          <div className="graphs-leftside"></div>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>VolumeUsd24Hr</th>
+                <th>supply</th>
+                <th>Prices (USD)</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {coins.map(({ id, name, rank, priceUsd, volumeUsd24Hr, supply}) => (
+                <tr key={id}>
+                  <td>{rank}</td>
+                  <td>{name}</td>
+                  <td>{parseFloat(volumeUsd24Hr).toFixed(2)}</td>
+                  <td>{parseFloat(supply).toFixed(2)}</td>
+                  <td>${parseFloat(priceUsd).toFixed(5)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       </header>
+      <div className="buttons">
+            <button onClick={() => setLimit(limit + 20)}>Next</button>
+            <button onClick={() => setLimit(20)}>Refresh</button>
+          </div>
     </div>
   );
 };
 
 export default Graphs;
+
+// import './Graphs.css';
+
+// const Graphs: React.FC = () => {
+//   return (
+//     <div className="Graphs-container">
+//       <header className="Graphs-header">
+//         <div>
+//           <div className="square"></div>
+//           <div className="square"></div>
+//         </div>
+//         <div className="line"></div>
+//         <div className="top"></div>
+//       </header>
+//     </div>
+//   );
+// };
+
+// export default Graphs;

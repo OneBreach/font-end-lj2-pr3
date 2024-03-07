@@ -4,38 +4,69 @@
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 1.5rem 2rem; 
+    padding: 0.8rem 2rem; 
     font-family: monospace;
   }
 
-  nav{
-    display: flex;
-  }
+.change-percent {
+  font-weight: bold;
+}
 
-  .top-header nav .data-container p span{
-    color: #3300FF;
-    font-family: 'Roboto', sans-serif;
-  }
+p{
+  color: white;
+}
 
-  .top-header nav .data-container p {
-    font-size: 0.8rem;
-    color: #ffffff;
-    margin: 0;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-  }
+.change-percent.negative {
+  color: red;
+}
 
-  .top-header nav .data-container {
-    display: flex;
-    gap: 40px;
-    margin: 0; 
-    padding: 0; 
-  }
+.change-percent.positive {
+  color: green;
+}
 
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: #323546;
-  }
+.top-header nav .data-container {
+  display: flex;
+  gap: 40px;
+  margin: 0; 
+  padding: 0; 
+}
+
+.log-in-button{
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-color: #3300FF;
+}
+
+.log-in-button p{
+  margin: 8px 15px 8px 15px;
+}
+
+.sign-up-button{
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-color: #3300FF;
+  background-color: #3300FF;
+}
+
+.sign-up-button p{
+  margin: 8px 15px 8px 15px;
+  background-color: #3300FF;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #323546;
+}
+
+.coin-data{
+  display: flex;
+  gap: 10px;
+}
+  
   
   

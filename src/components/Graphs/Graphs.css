@@ -9,11 +9,10 @@
     display: flex;
 }
 
-  .square{
-    width: 450px;
+  .graphs-leftside{
+    width: 600px;
     height: 240px;
     margin-top: 2rem;
-    background-color: rgb(0, 225, 255);
   }
 
   .Graphs-header .line{
@@ -33,56 +32,66 @@
   .Graphs-container {
     position: relative;
   }
+
+  section {
+    width: 100%; /* Ensure the section fills the container's width */
+    display: flex; /* Use flexbox for layout and alignment */
+    justify-content: space-between; /* Align table to the left with margins */
+  }
   
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  table {
+    width: 100%; /* Make the table span the full section */
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    white-space: nowrap; /* Prevent wrapping and ensure full width text */
+    text-align: center; /* Align text to the left within cells */
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  th {
+    background-color: #0D1421; /* Set a dark background for headers */
+    color: white; /* Ensure header text is visible */
+    font-weight: bold; /* Emphasize headers */
+  }
+  
+  td {
+    background-color: #0D1421;
+    color: white; /* Set a light background for data */
+  }
+  
+  /* Remove borders from all cells except the bottom */
+  th, td {
+    border: 0 none; /* Set all borders to none */
+  }
+  
+  /* Add a bottom border only to table cells (including headers) */
+  tr { /* Target entire table rows */
+    border-bottom: 1px solid #ddd; /* Add a bottom border to each row */
+  }
+  
+  .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px; /* Afstand tussen de knoppen */
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 8px;
   }
   
-  .popup {
-    background: rgb(22,42,77);
-    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
+  .buttons button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
     color: white;
-    border-radius: 5px;
-    padding: 20px;
-  }
-
-  .popup-content .welcome-text{
-    font-family: 'Roboto', sans-serif;
-    width: 500px;
-    background: rgb(22,42,77);
-    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
-  }
-
-  .gast-button{
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0px 0px 0px;
-    background: rgb(22,42,77);
-    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
-    font-family: 'Roboto', sans-serif;
-    color: rgb(146, 146, 146);
-  }
-
-  .popup-content{
-    background: rgb(22,42,77);
-    background: linear-gradient(90deg, rgba(22,42,77,1) 15%, rgba(26,62,130,1) 44%, rgba(13,20,33,1) 82%);
-  }
-
-  .popup-buttons p {
-  margin-left: 20px;
-  }
-  
-  .gast-button:hover{
-    color: #5ea8f8;
+    border-radius: 4px;
     cursor: pointer;
   }
   
+  .buttons button:hover {
+    background-color: #444;
+  }
   
