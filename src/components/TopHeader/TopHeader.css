@@ -31,6 +31,21 @@ p{
   padding: 0; 
 }
 
+.empty-button{
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-color: #313136;
+  background-color: #313136;
+}
+
+.empty-button p{
+  margin: 8px 15px 8px 15px;
+  background-color: #313136;
+  box-shadow: none;
+}
+
 .log-in-button{
   border-radius: 5px;
   display: flex;
@@ -55,6 +70,14 @@ p{
 .sign-up-button p{
   margin: 8px 15px 8px 15px;
   background-color: #3300FF;
+}
+
+.log-in-button:hover{
+cursor: pointer;
+}
+
+.sign-up-button:hover{
+  cursor: pointer;
 }
 
 .line {

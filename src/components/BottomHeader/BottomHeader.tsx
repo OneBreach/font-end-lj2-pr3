@@ -7,7 +7,7 @@ const BottomHeader: React.FC = () => {
       <div className="header-container">
         <nav>
           <ul>
-            <li><a href="#">Cryptocurrencies</a></li>
+            <li><a href="#"></a></li>
             <li><a href="#">Exchanges</a></li>
             <li><a href="#">Community</a></li>
             <li><a href="#">Products</a></li>

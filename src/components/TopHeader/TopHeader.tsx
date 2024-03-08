@@ -29,6 +29,8 @@ const TopHeader: React.FC = () => {
             </p>
           </div>
         ))}
+                <button className="empty-button"><p>More</p></button>
+                <button className="empty-button"><p>Milan Coin</p></button>
         <button className="log-in-button"><p>Log in</p></button>
         <button className="sign-up-button"><p>Sign up</p></button>
       </div>
