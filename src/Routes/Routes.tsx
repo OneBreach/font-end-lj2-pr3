@@ -1,15 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../Pages/homepage/App";
-import Test from "../Pages/Testpage/Test";
+import CoinDetails from "../Pages/CoinDetails/CoinDetails"
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
-        children: [
-            {path: "", element: <App/>},
-            {path: "test", element: <Test/>}
-        ]
-        
+    },
+    {
+        path: "/coin-details/:id", element: <CoinDetails/>
     }
 ]);

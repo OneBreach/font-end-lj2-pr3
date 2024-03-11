@@ -1,6 +1,9 @@
 import React from "react";
 import "./TopHeader.css";
 import { useState, useEffect } from "react";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { IoWalletOutline } from "react-icons/io5";
+
 
 const TopHeader: React.FC = () => {
   const [coins, setCoins] = useState([]);
@@ -29,8 +32,10 @@ const TopHeader: React.FC = () => {
             </p>
           </div>
         ))}
-                <button className="empty-button"><p>More</p></button>
-                <button className="empty-button"><p>Milan Coin</p></button>
+        <div className="icon">
+          <IoWalletOutline className="wallet-icon" />
+          <IoIosNotificationsOutline />
+        </div>
         <button className="log-in-button"><p>Log in</p></button>
         <button className="sign-up-button"><p>Sign up</p></button>
       </div>

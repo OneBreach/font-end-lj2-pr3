@@ -31,19 +31,16 @@ p{
   padding: 0; 
 }
 
-.empty-button{
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
+.icon{
   color: white;
-  border-color: #313136;
-  background-color: #313136;
+  font-size: 25px;
+  margin-top: 5px;
 }
 
-.empty-button p{
-  margin: 8px 15px 8px 15px;
-  background-color: #313136;
-  box-shadow: none;
+.icon .wallet-icon{
+  margin-right: 10px;
+  color: white;
+
 }
 
 .log-in-button{
@@ -52,6 +49,7 @@ p{
   justify-content: center;
   color: white;
   border-color: #3300FF;
+  background-color: #0D1421;
 }
 
 .log-in-button p{

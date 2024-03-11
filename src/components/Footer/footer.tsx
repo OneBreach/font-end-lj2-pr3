@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
       <p>Crypto Checker is your go-to destination for reliable cryptocurrency data. Our platform provides real-time prices, historical trends, and in-depth market analysis, empowering you to make informed decisions in the dynamic world of digital assets. Join us as we navigate the future of finance together.</p>
     </div>
   </div>
+
 </footer>
 
   );

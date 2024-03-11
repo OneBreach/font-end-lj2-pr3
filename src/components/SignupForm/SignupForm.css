@@ -1,0 +1,30 @@
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nieuwsbrief {
+    margin-top: 0;
+    margin-bottom: 15px; /* Adjust margin for spacing */
+    font-size: 2rem;
+    font-weight: bold; /* Add boldness for emphasis */
+    text-align: center; /* Center the text within the form */
+  }
+  
+  .nieuwsbrief-input {
+    width: 500px; /* Adjust width as needed */
+    padding: 15px; /* Increase padding for better readability */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff; /* Darker text color for contrast */
+  }
+  
+  .nieuwsbrief-input::placeholder {
+    text-align: center; /* Maintain centered placeholder text */
+  }
+  
