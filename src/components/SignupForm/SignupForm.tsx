@@ -8,8 +8,8 @@ const SignupForm: React.FC = () => {
       <input
         className='nieuwsbrief-input'
         type="email"
-        name="email" // Add a meaningful name for accessibility
-        id="newsletter-signup" // Add a unique ID for potential form handling
+        name="email"
+        id="newsletter-signup"
         placeholder='Schrijf je nu in voor de nieuwsbrief!'
       />
     </section>

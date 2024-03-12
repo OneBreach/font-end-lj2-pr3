@@ -4,29 +4,19 @@ import "./Graphs.css";
 import { useState, useEffect } from "react";
 import { CiHeart } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
-
-interface Coin {
-  id: number;
-  name: string;
-  rank: number;
-  priceUsd: string;
-  volumeUsd24Hr: string;
-  supply: string;
-  changePercent24Hr: string;
-  vwap24Hr: string;
-}
+import { Coin } from "../../types";
 
 interface GraphsProps {
   coins: Coin[];
-  onSearch: (searchTerm: string) => void; // Function to handle search updates
+  onSearch: (searchTerm: string) => void;
 }
 
 const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState(""); // State for search term
+  const [searchTerm, setSearchTerm] = useState("");
   const [favoriteCoins, setFavoriteCoins] = useState<Coin[]>(() => {
     const storedFavorites = localStorage.getItem("favoriteCoins");
     return storedFavorites ? JSON.parse(storedFavorites) : [];
-  }); // State for favorite coins
+  });
 
   useEffect(() => {
     localStorage.setItem("favoriteCoins", JSON.stringify(favoriteCoins));
@@ -34,8 +24,8 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = event.target.value.toLowerCase();
-    setSearchTerm(searchValue); // Lowercase for case-insensitive search
-    onSearch(searchValue); // Pass search term to onSearch prop
+    setSearchTerm(searchValue);
+    onSearch(searchValue);
   };
 
   const addToFavorites = (coin: Coin) => {
@@ -61,17 +51,18 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
       <header className="Graphs-header">
         <div className="graphs-leftside">
           <PieChart
-            data={coins
-              .slice(0, 10)
-              .map((coin) => ({
-                label: coin.name,
-                value: Number(coin.volumeUsd24Hr),
-              }))}
+            data={coins.slice(0, 10).map((coin) => ({
+              label: coin.name,
+              value: Number(coin.volumeUsd24Hr),
+            }))}
           />
           <aside>
             <div className="favorites">
               <h2>
-                Favorites <span className="favorite-icon"><CiHeart /></span>
+                Favorites{" "}
+                <span className="favorite-icon">
+                  <CiHeart />
+                </span>
               </h2>
               <div className="favorite-content">
                 <ul className="favorite-list">
@@ -89,6 +80,11 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                         }}
                       >
                         {parseFloat(coin.changePercent24Hr).toFixed(2)}%
+                      </td>
+                      <td>
+                        <div onClick={() => removeFromFavorites(coin.id)}>
+                          <MdDeleteOutline />
+                        </div>
                       </td>
                     </li>
                   ))}
@@ -115,7 +111,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                 {coins
                   .filter((coin) =>
                     coin.name.toLowerCase().includes(searchTerm)
-                  ) // Filter coins by name (case-insensitive)
+                  )
                   .map((coin) => (
                     <tr key={coin.id}>
                       <td>{coin.rank}/100</td>
@@ -139,11 +135,13 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                       </td>
                       <td>
                         {favoriteCoins.find((c) => c.id === coin.id) ? (
-                          <div  onClick={() => removeFromFavorites(coin.id)}>
+                          <div onClick={() => removeFromFavorites(coin.id)}>
                             <MdDeleteOutline />
                           </div>
                         ) : (
-                          <div onClick={() => addToFavorites(coin)}><CiHeart /></div>
+                          <div onClick={() => addToFavorites(coin)}>
+                            <CiHeart />
+                          </div>
                         )}
                       </td>
                     </tr>

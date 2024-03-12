@@ -129,14 +129,13 @@ thead th {
   align-items: center;
   color: white;
   margin: 25px;
-  max-height: 200px; /* Set maximum height */
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-/* Hide the vertical scrollbar on the left */
 .favorites::-webkit-scrollbar {
   width: 0;
-  background-color: transparent; /* Set background color to match the container */
+  background-color: transparent;
 }
 
 .favorite-content {

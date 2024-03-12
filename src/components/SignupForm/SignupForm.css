@@ -9,22 +9,23 @@
   
   .nieuwsbrief {
     margin-top: 0;
-    margin-bottom: 15px; /* Adjust margin for spacing */
+    margin-bottom: 15px;
     font-size: 2rem;
-    font-weight: bold; /* Add boldness for emphasis */
-    text-align: center; /* Center the text within the form */
+    font-weight: bold; 
+    text-align: center;
   }
   
   .nieuwsbrief-input {
-    width: 500px; /* Adjust width as needed */
-    padding: 15px; /* Increase padding for better readability */
-    border: 1px solid #ccc; /* Light border color */
+    width: 500px; 
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    color: #ffffff; /* Darker text color for contrast */
+    color: #ffffff;
+    background-color: #0D1421;
   }
   
   .nieuwsbrief-input::placeholder {
-    text-align: center; /* Maintain centered placeholder text */
+    text-align: center;
   }
   

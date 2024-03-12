@@ -27,16 +27,13 @@ const PieChart: FC<PieChartProps> = ({ className, type = "pie", data }) => {
     },
     labels: data.map((item) => String(item.label)),
     fill: {
-      // Update fill to create a gradient
       type: "gradient",
       gradient: {
-        // Set shade to 'dark' for darker colors
         shade: "dark",
-        type: "horizontal", // Optional, controls gradient direction
-        // Adjust these values to customize the gradient darkness
-        shadeIntensity: 0.75, // Higher value creates darker shades
-        opacityFrom: 0.8, // Adjust starting opacity (0-1)
-        opacityTo: 0.4, // Adjust ending opacity (0-1)
+        type: "horizontal",
+        shadeIntensity: 0.75,
+        opacityFrom: 0.8,
+        opacityTo: 0.4,
       },
     },
   };
