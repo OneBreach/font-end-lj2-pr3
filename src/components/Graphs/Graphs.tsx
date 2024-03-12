@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import PieChart from "../PieChart.tsx/PieChart";
 import "./Graphs.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CiHeart } from "react-icons/ci";
+import { MdDeleteOutline } from "react-icons/md";
 
 interface Coin {
   id: number;
@@ -22,7 +23,14 @@ interface GraphsProps {
 
 const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
-  const [favoriteCoins, setFavoriteCoins] = useState<Coin[]>([]); // State for favorite coins
+  const [favoriteCoins, setFavoriteCoins] = useState<Coin[]>(() => {
+    const storedFavorites = localStorage.getItem("favoriteCoins");
+    return storedFavorites ? JSON.parse(storedFavorites) : [];
+  }); // State for favorite coins
+
+  useEffect(() => {
+    localStorage.setItem("favoriteCoins", JSON.stringify(favoriteCoins));
+  }, [favoriteCoins]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = event.target.value.toLowerCase();
@@ -60,28 +68,34 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                 value: Number(coin.volumeUsd24Hr),
               }))}
           />
-        <aside>
-        <div className="favorites">
-  <h2>Favorites    <span className="favorite-icon"><CiHeart /></span></h2>
-  <div className="favorite-content">
-    <ul className="favorite-list">
-      {favoriteCoins.map((coin) => (
-        <li key={coin.id}
-        >
-          <td>{coin.rank}</td>
-          <td>{coin.name}</td>
-          <td>${parseFloat(coin.priceUsd).toFixed(2)}</td>
-          <td
-          style={{
-            color: parseFloat(coin.changePercent24Hr) > 0 ? "green" : "red",
-          }}
-          >{parseFloat(coin.changePercent24Hr).toFixed(2)}%</td>
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-        </aside>
+          <aside>
+            <div className="favorites">
+              <h2>
+                Favorites <span className="favorite-icon"><CiHeart /></span>
+              </h2>
+              <div className="favorite-content">
+                <ul className="favorite-list">
+                  {favoriteCoins.map((coin) => (
+                    <li key={coin.id}>
+                      <td>{coin.rank}</td>
+                      <td>{coin.name}</td>
+                      <td>${parseFloat(coin.priceUsd).toFixed(2)}</td>
+                      <td
+                        style={{
+                          color:
+                            parseFloat(coin.changePercent24Hr) > 0
+                              ? "green"
+                              : "red",
+                        }}
+                      >
+                        {parseFloat(coin.changePercent24Hr).toFixed(2)}%
+                      </td>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </aside>
         </div>
         <section>
           <div className="table-container">
@@ -115,16 +129,21 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                       <td>${parseFloat(coin.priceUsd).toFixed(5)}</td>
                       <td
                         style={{
-                          color: parseFloat(coin.changePercent24Hr) > 0 ? "green" : "red",
+                          color:
+                            parseFloat(coin.changePercent24Hr) > 0
+                              ? "green"
+                              : "red",
                         }}
                       >
                         {parseFloat(coin.changePercent24Hr).toFixed(4)}%
                       </td>
                       <td>
                         {favoriteCoins.find((c) => c.id === coin.id) ? (
-                          <button onClick={() => removeFromFavorites(coin.id)}>remove</button>
+                          <div  onClick={() => removeFromFavorites(coin.id)}>
+                            <MdDeleteOutline />
+                          </div>
                         ) : (
-                          <button onClick={() => addToFavorites(coin)}>add</button>
+                          <div onClick={() => addToFavorites(coin)}><CiHeart /></div>
                         )}
                       </td>
                     </tr>
