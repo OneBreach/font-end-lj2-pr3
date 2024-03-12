@@ -93,7 +93,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
             </div>
           </aside>
         </div>
-        <section>
+        <section className="graph-section">
           <div className="table-container">
             <table>
               <thead>

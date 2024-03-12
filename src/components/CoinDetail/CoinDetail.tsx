@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Coin } from "../../types";
 import { Link } from "react-router-dom";
+import './CoinDetail.css';
+import { FaBackspace } from "react-icons/fa";
 
 function CoinDetail() {
   let { id } = useParams();
@@ -18,11 +20,12 @@ function CoinDetail() {
 
   return (
     
-    <section>
-      <Link to={`/`}>
-  <span className="test">terug</span>
+    <section className="coin-detail-section">
+            <Link to={`/`}>
+  <span className="back-button"><FaBackspace /></span>
 </Link>
-      <table>
+      <div className="coin-detail-table"></div>
+      <table className="table-coin-detail">
         <thead>
           <tr>
             <th>#</th>
@@ -50,6 +53,7 @@ function CoinDetail() {
           </>
         )}
       </table>
+      <div className="coin-detail-table"></div>
     </section>
   );
 }

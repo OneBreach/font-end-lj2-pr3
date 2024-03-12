@@ -1,0 +1,13 @@
+.coin-detail-table{
+    height: 100px;
+}
+
+.coin-detail-section{
+margin-top: 20px;
+}
+
+.back-button{
+    color: white;
+    margin: 20px 20px 20px 20px;
+    font-size: 20px;
+}
