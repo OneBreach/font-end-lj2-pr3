@@ -41,7 +41,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
   return (
     <div className="Graphs-container">
       <div className="search-bar">
-        <input
+        <input className="search-bar-input"
           type="text"
           placeholder="Search coins by name..."
           value={searchTerm}

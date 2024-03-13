@@ -14,12 +14,15 @@ const BottomHeader: React.FC = () => {
             <li><a href="#">NFTs</a></li>
             <li><a href="#">Wallet</a></li>
             <li><a href="#">News</a></li>
+            <li><a href="#">Staking</a></li>
+            <li><a href="#">Tokenomics</a></li>
+            <li><a href="#">Blockchain-technologie</a></li>
           </ul>
         </nav>
-        <div className="search-container">
+        {/* <div className="search-container">
           <input type="text" placeholder="Coin Name..." />
           <button type="submit">Search</button>
-        </div>
+        </div> */}
       </div>
       <div className="line"></div>
     </header>
