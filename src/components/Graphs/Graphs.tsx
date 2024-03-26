@@ -134,17 +134,25 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                       >
                         {parseFloat(coin.changePercent24Hr).toFixed(4)}%
                       </td>
+
+
+
+
                       <td>
-                        {favoriteCoins.find((c) => c.id === coin.id) ? (
-                          <div onClick={() => removeFromFavorites(coin.id)}>
-                            <MdDeleteOutline />
-                          </div>
-                        ) : (
-                          <div onClick={() => addToFavorites(coin)}>
-                            <CiHeart />
-                          </div>
-                        )}
-                      </td>
+  {favoriteCoins.find((c) => c.id === coin.id) ? (
+    <div onClick={() => removeFromFavorites(coin.id)} data-testid="favorite-delete-icon">
+      <MdDeleteOutline />
+    </div>
+  ) : (
+    <div onClick={() => addToFavorites(coin)} data-testid="favorite-heart-icon">
+      <CiHeart />
+    </div>
+  )}
+</td>
+
+
+
+
                     </tr>
                   ))}
               </tbody>
