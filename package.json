@@ -29,6 +29,8 @@
     "@types/jest": "^29.5.12",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
+    "@types/testing-library__dom": "^7.5.0",
+    "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react": "^4.2.1",
@@ -38,6 +40,7 @@
     "jsdom": "^24.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
+    "vite-test": "^0.4.0",
     "vitest": "^1.4.0"
   }
 }

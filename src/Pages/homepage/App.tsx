@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import BottomHeader from '../../components/BottomHeader/BottomHeader';
 import Footer from '../../components/Footer/footer';
 import Graphs from '../../components/Graphs/Graphs';
-import SignupForm from '../../components/SignupForm/SignupForm';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import './App.css';
 
@@ -31,7 +30,6 @@ function App() {
       <Graphs coins={coins} onSearch={function (): void {
         throw new Error('Function not implemented.');
       } }/>
-      <SignupForm />
       <Footer />
     </div>
   );

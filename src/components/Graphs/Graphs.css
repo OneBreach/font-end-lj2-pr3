@@ -4,9 +4,11 @@
   overflow: hidden;
 }
 
+
 .Graphs-header {
   padding: 0rem 2rem 2rem 0rem;
   display: flex;
+  height: 600px;
 }
 
 .graphs-leftside {
