@@ -1,7 +1,8 @@
 /* CryptoSiteDescription.css */
 
 .crypto-site-description {
-    max-width: 800px;
+    max-width: 1200px;
+    text-align: center;
     margin: 0 auto;
     padding: 20px;
     background-color: #0D1421;

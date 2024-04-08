@@ -4,6 +4,7 @@
     max-width: 400px;
     margin: 0 auto;
     margin-bottom: 50px;
+    margin-top: 30px;
   }
   
   .email-signup-form h2 {
@@ -26,7 +27,7 @@
   
   .email-signup-form button {
     padding: 0.5rem 1rem;
-    background-color: #007bff;
+    background-color: #3300FF;
     color: #fff;
     border: none;
     border-radius: 4px;
