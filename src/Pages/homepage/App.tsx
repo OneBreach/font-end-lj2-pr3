@@ -33,9 +33,9 @@ function App() {
       <Graphs coins={coins} onSearch={function (): void {
         throw new Error('Function not implemented.');
       } }/>
+            <CryptoIcons />
       <AboutUs />
       <Signup/>
-      <CryptoIcons />
       <Footer />
     </div>
   );

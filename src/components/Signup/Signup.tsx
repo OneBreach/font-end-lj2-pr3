@@ -8,7 +8,6 @@ const Signup: React.FC = () => {
         <input
           type="email"
           placeholder="Voer je e-mailadres in"
-
           required
         />
         <button type="submit">Inschrijven</button>

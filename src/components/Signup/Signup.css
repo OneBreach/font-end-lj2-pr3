@@ -5,8 +5,18 @@
     margin: 0 auto;
     margin-bottom: 50px;
     margin-top: 30px;
+    animation: moveUpDown 1.5s infinite alternate;
   }
   
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
   .email-signup-form h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -27,7 +37,7 @@
   
   .email-signup-form button {
     padding: 0.5rem 1rem;
-    background-color: #3300FF;
+  background-color: #3300FF;
     color: #fff;
     border: none;
     border-radius: 4px;

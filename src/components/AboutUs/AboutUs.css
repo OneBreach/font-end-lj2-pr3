@@ -8,17 +8,28 @@
     background-color: #0D1421;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .crypto-site-description h2 {
+    animation: fadeIn 1s ease forwards; /* Apply fadeIn animation */
+    opacity: 0; /* Initially hide the element */
+}
+
+/* Define keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.crypto-site-description h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: white;
-  }
-  
-  .crypto-site-description p {
+}
+
+.crypto-site-description p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 15px;
-  }
-  
+}

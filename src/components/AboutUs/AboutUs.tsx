@@ -11,7 +11,7 @@ const AboutUs: React.FC = () => {
       </p>
       <p>
         Met onze intuïtieve interface kunt u gemakkelijk door verschillende cryptocurrencies bladeren en gedetailleerde informatie vinden over individuele munten en tokens. Of u nu een doorgewinterde handelaar bent of gewoon geïnteresseerd bent in de wereld van crypto, onze site heeft voor elk wat wils.
-      </p>
+      </p>a
       <p>
         Blijf op de hoogte van de laatste trends, volg de prijsbewegingen van uw favoriete munten en neem deel aan de spannende wereld van cryptocurrency-handel met vertrouwen, dankzij onze uitgebreide en up-to-date gegevens.
       </p>
