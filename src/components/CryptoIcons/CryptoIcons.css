@@ -1,0 +1,22 @@
+.crypto-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+  }
+  
+  .crypto-icon {
+    font-size: 3rem;
+    margin: 10px;
+    animation: moveUpDown 1.5s infinite alternate;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  

@@ -7,6 +7,7 @@ import TopHeader from '../../components/TopHeader/TopHeader';
 import './App.css';
 import Signup from '../../components/Signup/Signup';
 import AboutUs from '../../components/AboutUs/AboutUs';
+import CryptoIcons from '../../components/CryptoIcons/CryptoIcons';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       } }/>
       <AboutUs />
       <Signup/>
+      <CryptoIcons />
       <Footer />
     </div>
   );
