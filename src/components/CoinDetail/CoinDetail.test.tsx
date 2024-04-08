@@ -2,12 +2,11 @@
 import CoinDetail from './CoinDetail';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { act, render, screen } from '@testing-library/react';
-import '@testing-library/user-event'; // Importeer de juiste bibliotheek voor ViteTest
+import '@testing-library/user-event'; 
 
 
 describe('CoinDetail', () => {
   it('renders the CoinDetail component', async () => {
-    // Gebruik act om de asynchrone rendering af te handelen
     await act(async () => {
       render(
         <Router>
@@ -18,10 +17,8 @@ describe('CoinDetail', () => {
       );
     });
 
-    // Verwacht dat de back-knop aanwezig is
     expect(screen.getByTestId('back-button')).toBeTruthy();
 
-    // Wacht tot de gegevens zijn geladen en controleer of de tabel aanwezig is
     await screen.findByText(/Coin Name/i);
     expect(screen.getByText(/Coin Name/i)).toBeTruthy();
     expect(screen.getByText(/Prices \(USD\)/i)).toBeTruthy();

@@ -5,6 +5,8 @@ import Footer from '../../components/Footer/footer';
 import Graphs from '../../components/Graphs/Graphs';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import './App.css';
+import Signup from '../../components/Signup/Signup';
+import AboutUs from '../../components/AboutUs/AboutUs';
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
       <Graphs coins={coins} onSearch={function (): void {
         throw new Error('Function not implemented.');
       } }/>
+      <AboutUs />
+      <Signup/>
       <Footer />
     </div>
   );
