@@ -12,14 +12,14 @@ import { SiBitcoincash } from "react-icons/si";
 const CryptoIcons: React.FC = () => {
   return (
     <div className="crypto-icons">
-      <CiBitcoin className="crypto-icon" />
-      <FaEthereum className="crypto-icon" />
-      <SiTether className="crypto-icon" />
-      <SiBinance className="crypto-icon" />
-      <TbCurrencySolana className="crypto-icon" />
-      <TbCurrencyDogecoin className="crypto-icon" />
-      <SiCardano className="crypto-icon" />
-      <SiBitcoincash className="crypto-icon" />
+      <CiBitcoin className="crypto-icon" data-testid="crypto-icon" />
+      <FaEthereum className="crypto-icon" data-testid="crypto-icon" />
+      <SiTether className="crypto-icon" data-testid="crypto-icon" />
+      <SiBinance className="crypto-icon" data-testid="crypto-icon" />
+      <TbCurrencySolana className="crypto-icon" data-testid="crypto-icon" />
+      <TbCurrencyDogecoin className="crypto-icon" data-testid="crypto-icon" />
+      <SiCardano className="crypto-icon" data-testid="crypto-icon" />
+      <SiBitcoincash className="crypto-icon" data-testid="crypto-icon" />
     </div>
   );
 };
