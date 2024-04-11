@@ -10,7 +10,7 @@ const Signup: React.FC = () => {
           placeholder="Voer je e-mailadres in"
           required
         />
-        <button type="submit">Inschrijven</button>
+        <button type="submit" data-testid="submit-btn">Inschrijven</button>
       </form>
     </div>
 
