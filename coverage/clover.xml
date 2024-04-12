@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1712907608636" clover="3.2.0">
+  <project timestamp="1712907608636" name="All files">
+    <metrics statements="75" coveredstatements="17" conditionals="15" coveredconditionals="0" methods="39" coveredmethods="8" elements="129" coveredelements="25" complexity="0" loc="75" ncloc="75" packages="13" files="13" classes="13"/>
+    <package name="vite-project">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name=".eslintrc.cjs" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/.eslintrc.cjs">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="main.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/main.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.Pages.CoinDetails">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="CoinDetails.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/Pages/CoinDetails/CoinDetails.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.Pages.homepage">
+      <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="App.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/Pages/homepage/App.tsx">
+        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.AboutUs">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="AboutUs.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/AboutUs/AboutUs.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.BottomHeader">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="BottomHeader.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/BottomHeader/BottomHeader.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.CoinDetail">
+      <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="CoinDetail.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/CoinDetail/CoinDetail.tsx">
+        <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.CryptoIcons">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="CryptoIcons.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/CryptoIcons/CryptoIcons.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.Footer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="footer.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/Footer/footer.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.Graphs">
+      <metrics statements="25" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="16" coveredmethods="0"/>
+      <file name="Graphs.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/Graphs/Graphs.tsx">
+        <metrics statements="25" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="16" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="144" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="153" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.PieChart.tsx">
+      <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="PieChart.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/PieChart.tsx/PieChart.tsx">
+        <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.Signup">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Signup.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/Signup/Signup.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="vite-project.src.components.TopHeader">
+      <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <file name="TopHeader.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/TopHeader/TopHeader.tsx">
+        <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

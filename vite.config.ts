@@ -6,6 +6,10 @@ import { vitest } from 'vitest';
 export default defineConfig({
   plugins: [react()],
   test: {
+    coverage: {
+      provider:'istanbul',
+      exclude: ['src/Routes', 'vite-project', 'vite-project/src']
+    },
     environment: 'jsdom',
     globals: true,
     setupFiles: './tests/setup.js', 

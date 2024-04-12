@@ -39,7 +39,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
   };
 
   return (
-    <div className="Graphs-container">
+    <div className="Graphs-container" data-testid="graphs-container">
       <div className="search-bar">
         <input
           className="search-bar-input"
@@ -47,6 +47,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
           placeholder="Search coins by name..."
           value={searchTerm}
           onChange={handleSearchChange}
+          data-testid="search-bar-input"
         />
       </div>
       <header className="Graphs-header">
@@ -56,9 +57,10 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
               label: coin.name,
               value: Number(coin.volumeUsd24Hr),
             }))}
+            data-testid="pie-chart"
           />
           <aside>
-            <div className="favorites">
+            <div className="favorites" data-testid="favorites">
               <h2>
                 Favorites{" "}
                 <span className="favorite-icon">
@@ -66,9 +68,9 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                 </span>
               </h2>
               <div className="favorite-content">
-                <ul className="favorite-list">
+                <ul className="favorite-list" data-testid="favorite-list">
                   {favoriteCoins.map((coin) => (
-                    <li key={coin.id}>
+                    <li key={coin.id} data-testid={`favorite-item-${coin.id}`}>
                       <td>{coin.rank}</td>
                       <td>{coin.name}</td>
                       <td>${parseFloat(coin.priceUsd).toFixed(2)}</td>
@@ -83,7 +85,10 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                         {parseFloat(coin.changePercent24Hr).toFixed(2)}%
                       </td>
                       <td>
-                        <div onClick={() => removeFromFavorites(coin.id)}>
+                        <div
+                          onClick={() => removeFromFavorites(coin.id)}
+                          data-testid={`remove-favorite-icon-${coin.id}`}
+                        >
                           <MdDeleteOutline />
                         </div>
                       </td>
@@ -96,7 +101,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
         </div>
         <section className="graph-section">
           <div className="table-container">
-            <table>
+            <table data-testid="coin-table">
               <thead>
                 <tr>
                   <th>#</th>
@@ -114,7 +119,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                     coin.name.toLowerCase().includes(searchTerm)
                   )
                   .map((coin) => (
-                    <tr key={coin.id}>
+                    <tr key={coin.id} data-testid={`coin-row-${coin.id}`}>
                       <td>{coin.rank}/100</td>
                       <td className="detail-link">
                         <Link to={`/coin-details/${coin.id}`}>
@@ -139,14 +144,14 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
                         {favoriteCoins.find((c) => c.id === coin.id) ? (
                           <div
                             onClick={() => removeFromFavorites(coin.id)}
-                            data-testid="favorite-delete-icon"
+                            data-testid={`remove-favorite-icon-${coin.id}`}
                           >
                             <MdDeleteOutline />
                           </div>
                         ) : (
                           <div
                             onClick={() => addToFavorites(coin)}
-                            data-testid="favorite-heart-icon"
+                            data-testid={`add-favorite-icon-${coin.id}`}
                           >
                             <CiHeart />
                           </div>
