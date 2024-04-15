@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import '@testing-library/user-event'; // Importeer de juiste bibliotheek voor ViteTest
+import '@testing-library/user-event'; 
 import AboutUs from './AboutUs';
 
 describe('AboutUs', () => {

@@ -1,5 +1,3 @@
-/* CryptoSiteDescription.css */
-
 .crypto-site-description {
     max-width: 1200px;
     text-align: center;
@@ -8,11 +6,10 @@
     background-color: #0D1421;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease forwards; /* Apply fadeIn animation */
-    opacity: 0; /* Initially hide the element */
+    animation: fadeIn 1s ease forwards; 
+    opacity: 0;
 }
 
-/* Define keyframes for fadeIn animation */
 @keyframes fadeIn {
     from {
         opacity: 0;

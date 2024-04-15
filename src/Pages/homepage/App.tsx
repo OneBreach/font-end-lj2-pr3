@@ -2,12 +2,12 @@
 import { useEffect, useState } from 'react';
 import BottomHeader from '../../components/BottomHeader/BottomHeader';
 import Footer from '../../components/Footer/footer';
-import Graphs from '../../components/Graphs/Graphs';
 import TopHeader from '../../components/TopHeader/TopHeader';
 import './App.css';
 import Signup from '../../components/Signup/Signup';
 import AboutUs from '../../components/AboutUs/AboutUs';
 import CryptoIcons from '../../components/CryptoIcons/CryptoIcons';
+import Graphs from '../../components/Graphs/Graphs';
 
 
 function App() {

@@ -3,7 +3,6 @@ import BottomHeader from '../../components/BottomHeader/BottomHeader';
 import Footer from '../../components/Footer/footer';
 import CoinDetail from '../../components/CoinDetail/CoinDetail';
 
-
 function App() {
   return (
     <div>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1712907608636" clover="3.2.0">
-  <project timestamp="1712907608636" name="All files">
-    <metrics statements="75" coveredstatements="17" conditionals="15" coveredconditionals="0" methods="39" coveredmethods="8" elements="129" coveredelements="25" complexity="0" loc="75" ncloc="75" packages="13" files="13" classes="13"/>
+<coverage generated="1712920390332" clover="3.2.0">
+  <project timestamp="1712920390332" name="All files">
+    <metrics statements="74" coveredstatements="17" conditionals="15" coveredconditionals="0" methods="36" coveredmethods="8" elements="125" coveredelements="25" complexity="0" loc="74" ncloc="74" packages="13" files="13" classes="13"/>
     <package name="vite-project">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name=".eslintrc.cjs" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/.eslintrc.cjs">
@@ -20,7 +20,7 @@
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="CoinDetails.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/Pages/CoinDetails/CoinDetails.tsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
       </file>
     </package>
     <package name="vite-project.src.Pages.homepage">
@@ -119,15 +119,14 @@
       </file>
     </package>
     <package name="vite-project.src.components.PieChart.tsx">
-      <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="PieChart.tsx" path="C:/Users/Milan/OneDrive/Documenten/Technovium SD/leerjaar 2/front-end/lj 2, periode 3/vite-project/src/components/PieChart.tsx/PieChart.tsx">
-        <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <metrics statements="5" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
       </file>
     </package>
     <package name="vite-project.src.components.Signup">

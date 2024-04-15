@@ -4,7 +4,6 @@
   overflow: hidden;
 }
 
-
 .Graphs-header {
   padding: 0rem 2rem 2rem 0rem;
   display: flex;
@@ -155,7 +154,6 @@ thead th {
   list-style: none;
   padding: 0;
   margin: 0;
-  
 }
 
 .search-bar{

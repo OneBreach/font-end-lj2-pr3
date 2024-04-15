@@ -19,10 +19,6 @@ const BottomHeader: React.FC = () => {
             <li><a href="#">Blockchain-technologie</a></li>
           </ul>
         </nav>
-        {/* <div className="search-container">
-          <input type="text" placeholder="Coin Name..." />
-          <button type="submit">Search</button>
-        </div> */}
       </div>
       <div className="line"></div>
     </header>

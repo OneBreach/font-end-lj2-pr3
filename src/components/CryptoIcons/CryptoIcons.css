@@ -8,15 +8,15 @@
   .crypto-icon {
     font-size: 3rem;
     margin: 10px;
-    animation: rotate 5s linear infinite; /* Apply the rotate animation */
+    animation: rotate 5s linear infinite;
   }
   
   @keyframes rotate {
     from {
-      transform: rotate(0deg); /* Start rotating from 0 degrees */
+      transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg); /* Rotate to 360 degrees */
+      transform: rotate(360deg);
     }
   }
   

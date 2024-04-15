@@ -10,18 +10,9 @@ interface PieChartProps {
   }[];
 }
 
-
 const PieChart: FC<PieChartProps> = ({ className, type = "pie", data }) => {
   const chartData = data.map((item) => item.value);
-class ResizeObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
-
-global.ResizeObserver = ResizeObserver;
   const defaultOptions: Props["options"] = {
-    
     chart: {
       toolbar: {
         show: false,
@@ -48,7 +39,9 @@ global.ResizeObserver = ResizeObserver;
 
   return (
     <div className={className}>
-      <ApexCharts type={type} series={chartData} options={defaultOptions} data-testid="apexchart" />
+      {typeof window !== 'undefined' && (
+        <ApexCharts type={type} series={chartData} options={defaultOptions} data-testid="apexchart" />
+      )}
     </div>
   );
 };
