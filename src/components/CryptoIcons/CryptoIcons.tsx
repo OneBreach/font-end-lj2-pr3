@@ -8,9 +8,11 @@ import { TbCurrencySolana } from "react-icons/tb";
 import { TbCurrencyDogecoin } from "react-icons/tb";
 import { SiCardano } from "react-icons/si";
 import { SiBitcoincash } from "react-icons/si";
+// import alle icons
 
 const CryptoIcons: React.FC = () => {
   return (
+    // display alle icons
     <div className="crypto-icons">
       <CiBitcoin className="crypto-icon" data-testid="crypto-icon" />
       <FaEthereum className="crypto-icon" data-testid="crypto-icon" />

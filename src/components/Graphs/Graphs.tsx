@@ -12,7 +12,9 @@ interface GraphsProps {
 }
 
 const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
+// dit is een usestate dit zorgt ervoor dat wanneer er een aanpassing is dat die iedere keer dit stukje opnieuw rendert zo kan die zoeken op coins.
   const [searchTerm, setSearchTerm] = useState("");
+// usestate favoriete coins bij elke aanpassing slaat die dit op in een local storage =
   const [favoriteCoins, setFavoriteCoins] = useState<Coin[]>(() => {
     const storedFavorites = localStorage.getItem("favoriteCoins");
     return storedFavorites ? JSON.parse(storedFavorites) : [];
@@ -28,17 +30,22 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
     onSearch(searchValue);
   };
 
+
   const addToFavorites = (coin: Coin) => {
+  // als de coin nog niet is toegevoegd aan favoriete coins dan voegt die deze toe
     if (!favoriteCoins.find((c) => c.id === coin.id)) {
+  // hier maakt die een kopie van de coin en zet deze in favoriete coins
       setFavoriteCoins([...favoriteCoins, coin]);
     }
   };
 
+  // wanneer een coin een favoriete coin is en deze actie wordt uitgevoerd verwijderd die deze coin uit favorite coins.
   const removeFromFavorites = (coinId: number) => {
     setFavoriteCoins(favoriteCoins.filter((coin) => coin.id !== coinId));
   };
 
   return (
+  // display
     <div className="Graphs-container" data-testid="graphs-container">
       <div className="search-bar">
         <input
@@ -46,6 +53,7 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
           type="text"
           placeholder="Search coins by name..."
           value={searchTerm}
+  // wanneer deze veranderd gaat die door naar handleSearchChange
           onChange={handleSearchChange}
           data-testid="search-bar-input"
         />
@@ -53,12 +61,15 @@ const Graphs: React.FC<GraphsProps> = ({ coins, onSearch }) => {
       <header className="Graphs-header">
         <div className="graphs-leftside">
           <PieChart
+          // dit laat de eerste 10 coins zien
             data={coins.slice(0, 10).map((coin) => ({
+          // data die die doorgeeft is de coin naam en de volume usd in 24 h
               label: coin.name,
               value: Number(coin.volumeUsd24Hr),
             }))}
             data-testid="pie-chart"
           />
+  {/* dit is de piechart component  */}
           <aside>
             <div className="favorites" data-testid="favorites">
               <h2>

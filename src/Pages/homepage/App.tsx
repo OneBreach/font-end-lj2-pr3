@@ -13,6 +13,7 @@ import Graphs from '../../components/Graphs/Graphs';
 function App() {
   const [coins, setCoins] = useState([]);
   const [limit] = useState(100);
+  // ik maak hier de api call
   useEffect(() => {
     const fetchCoins = async () => {
       const res = await fetch(
@@ -29,7 +30,8 @@ function App() {
   return (
     <div>
       <TopHeader />
-      <BottomHeader />
+      <BottomHeader /> 
+      {/* ik voeg de coins toe aan de graphs component */}
       <Graphs coins={coins} onSearch={function (): void {
         throw new Error('Function not implemented.');
       } }/>

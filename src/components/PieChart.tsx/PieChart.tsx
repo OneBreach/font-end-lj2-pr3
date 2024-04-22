@@ -1,6 +1,8 @@
 import { FC } from "react";
+// apexcharts library
 import ApexCharts, { Props } from "react-apexcharts";
 
+// dit laat zien wat voor data / props die verwacht voor de piechart
 interface PieChartProps {
   className?: string;
   type?: "pie" | "donut";
@@ -25,6 +27,7 @@ const PieChart: FC<PieChartProps> = ({ className, type = "pie", data }) => {
       position: "left",
     },
     labels: data.map((item) => String(item.label)),
+  // kleur piechart
     fill: {
       type: "gradient",
       gradient: {
@@ -39,6 +42,7 @@ const PieChart: FC<PieChartProps> = ({ className, type = "pie", data }) => {
 
   return (
     <div className={className}>
+      {/* geen global maar Server Side Rendering anders deed die het niet*/}
       {typeof window !== 'undefined' && (
         <ApexCharts type={type} series={chartData} options={defaultOptions} data-testid="apexchart" />
       )}
