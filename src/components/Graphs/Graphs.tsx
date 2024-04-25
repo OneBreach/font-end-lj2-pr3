@@ -7,6 +7,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { Coin } from "../../types";
 
 interface GraphsProps {
+  // in mijn interface heb ik 2 props coins en onsearch
   coins: Coin[];
   onSearch: (searchTerm: string) => void;
 }
